@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
               Text('fuck you all'),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.red,
+                  backgroundColor: Colors.red,
+                  shadowColor: Colors.green,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(100.0),
                   ),
@@ -30,8 +31,16 @@ class MyApp extends StatelessWidget {
                 },
               ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100.0),
+                  ),
+                ),
                 child: Text('answer 1'),
-                onPressed: null,
+                onPressed: () {
+                  print('login clicked');
+                },
               ),
               ElevatedButton(
                 child: Text(
