@@ -16,23 +16,54 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              Text('fuck you all'),
+              Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(10),
+                  child: const Text('Login Now',
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 30)),
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Colors.transparent,
+                          style: BorderStyle.solid,
+                          width: 2))),
+              Container(
+                decoration:
+                    BoxDecoration(border: Border.all(color: Colors.green)),
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(20),
+                child: TextField(
+                  controller: nameController,
+                  decoration: InputDecoration(
+                    labelText: 'Username',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+              Container(
+                decoration:
+                    BoxDecoration(border: Border.all(color: Colors.green)),
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(20),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+              TextButton(
+                  onPressed: () {
+                    print('forgot');
+                  },
+                  child: const Text('forgot password')),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red,
                   shadowColor: Colors.green,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100.0),
-                  ),
-                ),
-                child: Text('answer 1'),
-                onPressed: () {
-                  print('login clicked');
-                },
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(100.0),
                   ),
