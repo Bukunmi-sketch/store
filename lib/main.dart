@@ -35,7 +35,6 @@ class MyApp extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(20),
                 child: TextField(
-                  controller: nameController,
                   decoration: InputDecoration(
                     labelText: 'Username',
                     border: OutlineInputBorder(),
@@ -61,27 +60,25 @@ class MyApp extends StatelessWidget {
                   },
                   child: const Text('forgot password')),
               ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
-                  shadowColor: Colors.green,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100.0),
-                  ),
-                ),
-                child: Text('answer 1'),
-                onPressed: () {
-                  print('login clicked');
-                },
-              ),
-              ElevatedButton(
-                child: Text(
-                  'answer 1',
-                  style: TextStyle(fontSize: 18.0, fontFamily: "Brand Bold"),
+                child: const Text(
+                  'Login',
+                  style: TextStyle(fontSize: 13.0, fontFamily: "Brand Bold"),
                 ),
                 onPressed: () {
                   print('login clicked');
                 },
               ),
+
+              Row(
+                mainAxisAlignment:MainAxisAlignment.center,
+               children: [
+                  const Text('Does not have an account'),
+
+                  TextButton(onPressed: (){
+                    print("create")
+                  }, child: child)
+                  ],
+              )
             ],
           ),
         ),
