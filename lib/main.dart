@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Bucuzzi'),
+          title: Text('Xermux'),
         ),
         body: Center(
           child: Column(
@@ -68,16 +68,16 @@ class MyApp extends StatelessWidget {
                   print('login clicked');
                 },
               ),
-
               Row(
-                mainAxisAlignment:MainAxisAlignment.center,
-               children: [
-                  const Text('Does not have an account'),
-
-                  TextButton(onPressed: (){
-                    print("create")
-                  }, child: child)
-                  ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Does not have an account?'),
+                  TextButton(
+                      onPressed: () {
+                        print("create new account");
+                      },
+                      child: const Text('create new account')),
+                ],
               )
             ],
           ),
